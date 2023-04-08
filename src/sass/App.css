@@ -1,0 +1,216 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  min-height: 100vh;
+  background: linear-gradient(120deg, rgb(255, 255, 255), rgb(170, 170, 170));
+  font-family: "Cairo", sans-serif;
+}
+
+#root {
+  width: 100%;
+  height: 100%;
+}
+#root .App {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+#root .App h1 {
+  color: #4c4c7d;
+}
+#root .App p {
+  color: tomato;
+  font-size: 18px;
+}
+#root .App .current {
+  width: 90%;
+  height: 50px;
+}
+#root .App .current button {
+  width: 100%;
+  height: 100%;
+  background-color: #4c4c7d;
+  border: none;
+  font-size: 18px;
+  color: #fff;
+  box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+#root .App .current button:hover {
+  background-color: #38385c;
+}
+#root .App form {
+  width: 90%;
+  height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  justify-content: space-between;
+}
+#root .App form input[type=text] {
+  width: 100%;
+  height: 50px;
+  border: #4c4c7d 2px solid;
+  text-align: center;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  font-size: 18px;
+  color: #4c4c7d;
+  text-transform: capitalize;
+}
+#root .App form input[type=text]:focus {
+  outline: none;
+}
+#root .App form button {
+  width: 100%;
+  height: 50px;
+  background-color: #4c4c7d;
+  border: none;
+  font-size: 18px;
+  color: #fff;
+  box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+#root .App form button:hover {
+  background-color: #3f3f67;
+}
+#root .App .box {
+  background: linear-gradient(to bottom right, #4c4c7d, #343458);
+  border-radius: 10px;
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  text-align: center;
+  width: 90%;
+  margin-top: 30px;
+}
+#root .App .box .name {
+  color: #fff;
+  font-size: 35px;
+  letter-spacing: 2px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  text-transform: capitalize;
+}
+#root .App .box .status {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: #fff;
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-transform: capitalize;
+}
+#root .App .box .status img {
+  width: 100px;
+  height: 100px;
+}
+#root .App .box .temp {
+  display: flex;
+  justify-content: space-between;
+}
+#root .App .box .temp .min-temp,
+#root .App .box .temp .max-temp {
+  color: #eaeaea;
+  font-size: 14px;
+  text-transform: capitalize;
+}
+#root .App .box .temp .min-temp {
+  margin-right: 10px;
+}
+#root .App .box .wind {
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  font-size: 14px;
+  margin-top: 20px;
+}
+#root .App .box .wind .speed {
+  margin-bottom: 5px;
+}
+#root .App .next-days {
+  width: 90%;
+  height: -moz-fit-content;
+  height: fit-content;
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+}
+#root .App .next-days .day-box {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
+  flex-direction: column;
+  background: linear-gradient(to bottom right, #4c4c7d, #343458);
+  border-radius: 10px;
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+}
+#root .App .next-days .name {
+  color: #fff;
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  text-transform: capitalize;
+}
+#root .App .next-days .status {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-transform: capitalize;
+}
+#root .App .next-days .temp {
+  display: flex;
+  justify-content: space-between;
+}
+#root .App .next-days .temp .min-temp,
+#root .App .next-days .temp .max-temp {
+  color: #eaeaea;
+  font-size: 14px;
+  text-transform: capitalize;
+}
+#root .App .next-days .temp .min-temp {
+  margin-right: 10px;
+}
+#root .App .next-days .wind {
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  font-size: 14px;
+  margin-top: 20px;
+}
+#root .App .next-days .wind .speed {
+  margin-bottom: 5px;
+}/*# sourceMappingURL=App.css.map */
